@@ -15,12 +15,12 @@ module.exports = configure(({ ky }) => {
     if (options.flush != null) searchParams.set('flush', options.flush)
     if (options.hashAlg) searchParams.set('hash', options.hashAlg)
     if (options.parents != null) searchParams.set('parents', options.parents)
-    if (options.shardSplitThreshold != null) searchParams.set('shardSplitThreshold', options.shardSplitThreshold)
+    if (options.shardSplitThreshold != null) searchParams.set('shard-split-threshold', options.shardSplitThreshold)
     if (mtime) {
       searchParams.set('mtime', mtime.secs)
 
       if (mtime.nsecs != null) {
-        searchParams.set('mtimeNsecs', mtime.nsecs)
+        searchParams.set('mtime-nsecs', mtime.nsecs)
       }
     }
     if (options.mode != null) searchParams.set('mode', modeToString(options.mode))

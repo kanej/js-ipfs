@@ -25,7 +25,7 @@ module.exports = configure(({ ky }) => {
     if (options.quiet != null) searchParams.set('quiet', options.quiet)
     if (options.quieter != null) searchParams.set('quieter', options.quieter)
     if (options.rawLeaves != null) searchParams.set('raw-leaves', options.rawLeaves)
-    if (options.shardSplitThreshold) searchParams.set('shard-split-threshold', options.shardSplitThreshold)
+    if (options.shardSplitThreshold != null) searchParams.set('shard-split-threshold', options.shardSplitThreshold)
     if (options.silent) searchParams.set('silent', options.silent)
     if (options.trickle != null) searchParams.set('trickle', options.trickle)
     if (options.wrapWithDirectory != null) searchParams.set('wrap-with-directory', options.wrapWithDirectory)

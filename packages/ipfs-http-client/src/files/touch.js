@@ -12,11 +12,12 @@ module.exports = configure(({ ky }) => {
     searchParams.append('arg', path)
     if (mtime) {
       searchParams.set('mtime', mtime.secs)
-      searchParams.set('mtimeNsecs', mtime.nsecs)
+      searchParams.set('mtime-nsecs', mtime.nsecs)
     }
     if (options.flush != null) searchParams.set('flush', options.flush)
     if (options.hashAlg) searchParams.set('hash', options.hashAlg)
     if (options.parents != null) searchParams.set('parents', options.parents)
+    if (options.shardSplitThreshold != null) searchParams.set('shard-split-threshold', options.shardSplitThreshold)
 
     return ky.post('files/touch', {
       timeout: options.timeout,

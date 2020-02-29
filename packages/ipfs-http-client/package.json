@@ -17,6 +17,7 @@
   "browser": {
     "./src/add/form-data.js": "./src/add/form-data.browser.js",
     "./src/lib/buffer-to-form-data.js": "./src/lib/buffer-to-form-data.browser.js",
+    "./src/lib/multipart-request.js": "./src/lib/multipart-request.browser.js",
     "ipfs-utils/src/files/glob-source": false
   },
   "repository": {

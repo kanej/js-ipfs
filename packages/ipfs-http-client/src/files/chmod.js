@@ -10,9 +10,12 @@ module.exports = configure(({ ky }) => {
     const searchParams = new URLSearchParams(options.searchParams)
     searchParams.append('arg', path)
     searchParams.append('mode', modeToString(mode))
+
+    if (options.recursive != null) searchParams.set('recursive', options.recursive)
     if (options.flush != null) searchParams.set('flush', options.flush)
     if (options.hashAlg) searchParams.set('hash', options.hashAlg)
     if (options.parents != null) searchParams.set('parents', options.parents)
+    if (options.shardSplitThreshold != null) searchParams.set('shard-split-threshold', options.shardSplitThreshold)
 
     return ky.post('files/chmod', {
       timeout: options.timeout,
